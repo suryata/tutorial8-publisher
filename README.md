@@ -7,3 +7,7 @@ URL "amqp://guest:guest@localhost:5672" yang sama yang digunakan baik dalam prog
 
 ![rabbit mq](image.png)
 ![sending](image-1.png)
+Gambar di atas menunjukkan proses di mana, begitu perintah untuk menjalankan publisher diberikan, publisher tersebut mulai mengirimkan rangkaian data yang telah ditetapkan secara default ke dalam antrian pesan. Subscriber yang telah terhubung dengan antrian pesan ini kemudian akan menerima data tersebut dari antrian dan menampilkan mereka pada konsol sesuai dengan skrip yang telah diprogramkan sebelumnya.
+
+![chart](image-2.png)
+Tangkapan layar grafik di atas menunjukkan puncak-puncak dalam laju pesan yang dipublikasikan ke broker pesan. Puncak ini muncul sebagai hasil dari menjalankan program publisher. Setiap eksekusi dari publisher mengakibatkan sejumlah pesan diantar ke antrian, yang ditandai dengan kenaikan tajam dalam grafik 'Message rates'. Puncak ini merupakan indikator bahwa pesan telah berhasil dipublikasikan dan broker pesan (dalam kasus ini RabbitMQ) menerima dan mengolah pesan-pesan tersebut.
